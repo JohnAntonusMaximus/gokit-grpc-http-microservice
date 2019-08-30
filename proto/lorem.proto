@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pb;
+
+//import "google/api/annotations.proto";
+
+message LoremRequest {
+    string requestType = 1;
+    int32 min = 2;
+    int32 max = 3;
+}
+
+message LoremResponse {
+    string message = 1;
+    string err = 2;
+}
+
+
+service Lorem {
+    rpc Lorem(LoremRequest) returns (LoremResponse){
+        // option (google.api.http) = {
+        //     post: "/v1/lorem"
+        //     body: "*"
+        // };
+    };
+}
