@@ -18,6 +18,7 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
+// Errors takes all possible error types in a struct
 type Errors struct {
 	grpc   error
 	http   error
@@ -26,7 +27,7 @@ type Errors struct {
 
 func main() {
 	var (
-		gRPCAddr = flag.String("grpc", ":8081", "gRPC listen address")
+		gRPCAddr = flag.String("grpc", ":50051", "gRPC listen address")
 		//endpoint = flag.String("endpoint", "localhost:9090", "go.micro.srv.greeter address")
 	)
 
