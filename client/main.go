@@ -15,7 +15,7 @@ import (
 
 func main() {
 	var (
-		grpcAddr = flag.String("addr", ":8081", "gRPC address")
+		grpcAddr = flag.String("addr", ":50051", "gRPC address")
 	)
 
 	flag.Parse()
