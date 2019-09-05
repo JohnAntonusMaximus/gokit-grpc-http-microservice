@@ -8,9 +8,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/johnantonusmaximus/gokit-grpc-poc/proto"
+	pb "github.com/johnantonusmaximus/gokit-grpc-poc/proto"
 	"github.com/johnantonusmaximus/gokit-grpc-poc/server/service"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 func main() {
@@ -39,6 +40,7 @@ func main() {
 		handler := service.NewGRPCServer(endpoints)
 		gRPCServer := grpc.NewServer()
 		pb.RegisterLoremServer(gRPCServer, handler)
+		reflection.Register(gRPCServer)
 		errs <- gRPCServer.Serve(listener)
 	}()
 
