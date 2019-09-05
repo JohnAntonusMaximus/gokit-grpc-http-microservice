@@ -49,9 +49,9 @@ localhost:8080/v1/lorem/{requestType}/{min}/{max}
 ```
 
 WHERE:
-requestType = (word|sentence|paragraph)
-min = some positive integer
-max = some positive integer
+  - requestType = (word|sentence|paragraph)
+  - min = some positive integer
+  - max = some positive integer
 
 Example:
 ```sh
