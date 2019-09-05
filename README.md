@@ -32,6 +32,7 @@ Step Four:
 ```sh
 $ govendor sync
 ```
+Note: If you receive errors with finding commit hashes, just run the command again. 
 
 ### gRPC Usage
 Step One:
@@ -41,7 +42,7 @@ $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/server/main.go
 
 Step Two:
 ```sh
-$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/client/main.go lorem paragraph 10 4000
+$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/client/main.go lorem sentence 10 1000
 ```
 
 ### HTTP Usage
@@ -58,5 +59,5 @@ WHERE:
 
 Example:
 ```sh
-$ POST localhost:8080/v1/lorem/sentence/10/100
+$ POST localhost:8080/v1/lorem/sentence/10/1000
 ```
