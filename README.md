@@ -5,9 +5,10 @@ This is proof of concept for a gRPC microserve using GoKit that generates lorem 
 Format: [client Directory] 
 ```sh
 go run main.go lorem (word|sentence|paragraph) (minChars) (maxChars)
+
 ```
 
-### Usage
+### Installation
 Step One:
 ```sh
 $ go get github.com/johnantonusmaximus/gokit-grpc-poc
@@ -15,13 +16,44 @@ $ go get github.com/johnantonusmaximus/gokit-grpc-poc
 
 Step Two:
 ```sh
-$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/server/main.go
+$ go get go get -u github.com/kardianos/govendor
 ```
 
 Step Three:
 ```sh
+$ govendor init 
+```
+Note: Make sure your the path to GOBIN is in your PATH variable
+
+Step Four:
+```sh
+$ govendor sync
+```
+
+### gRPC Usage
+Step One:
+```sh
+$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/server/main.go
+```
+
+Step Two:
+```sh
 $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/client/main.go lorem paragraph 10 4000
 ```
 
-### To Do
-  - Add HTTP REST Proxy in the proto file (commented out right now)
+### HTTP Usage
+Step One:
+```sh
+Make a POST Request to the following endpoint:
+localhost:8080/v1/lorem/{requestType}/{min}/{max}
+```
+
+WHERE:
+requestType = (word|sentence|paragraph)
+min = some positive integer
+max = some positive integer
+
+Example:
+```sh
+$ POST localhost:8080/v1/lorem/sentence/10/100
+```
