@@ -16,11 +16,14 @@ $ go get github.com/johnantonusmaximus/gokit-grpc-poc
 
 Step Two:
 ```sh
-$ go get go get -u github.com/kardianos/govendor
+$ go get -u github.com/kardianos/govendor
+$ cd $GOPATH/src/github.com/kardianos/govendor
+$ go install .
 ```
 
 Step Three:
 ```sh
+$ cd $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc
 $ govendor init 
 ```
 Note: Make sure your the path to GOBIN is in your PATH variable
