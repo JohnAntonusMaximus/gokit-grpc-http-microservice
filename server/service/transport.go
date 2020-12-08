@@ -4,7 +4,7 @@ import (
 	"context"
 
 	grpctransport "github.com/go-kit/kit/transport/grpc"
-	pb "github.com/johnantonusmaximus/gokit-grpc-poc/proto"
+	pb "github.com/johnantonusmaximus/gokit-grpc-http-microservice/proto"
 )
 
 type grpcServer struct {

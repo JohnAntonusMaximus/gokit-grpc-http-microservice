@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	grpcClient "github.com/johnantonusmaximus/gokit-grpc-poc/client/service"
-	"github.com/johnantonusmaximus/gokit-grpc-poc/server/service"
+	grpcClient "github.com/johnantonusmaximus/gokit-grpc-http-microservice/client/service"
+	"github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/service"
 	"google.golang.org/grpc"
 )
 

@@ -11,38 +11,26 @@ go run main.go lorem (word|sentence|paragraph) (minChars) (maxChars)
 ### Installation
 Step One:
 ```sh
-$ go get github.com/johnantonusmaximus/gokit-grpc-poc
+Clone this repo
+$ git clone https://github.com/JohnAntonusMaximus/gokit-grpc-http-microservice.git
 ```
 
 Step Two:
 ```sh
-$ go get -u github.com/kardianos/govendor
-$ cd $GOPATH/src/github.com/kardianos/govendor
-$ go install .
-```
-
-Step Three:
-```sh
-$ cd $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc
-$ govendor init 
-```
-Note: Make sure your the path to GOBIN is in your PATH variable
-
-Step Four:
-```sh
-$ govendor sync
+$ go mod download
 ```
 Note: If you receive errors with finding commit hashes, just run the command again. 
 
 ### gRPC Usage
 Step One:
 ```sh
-$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/server/main.go
+$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/main.go
 ```
 
 Step Two:
+Open another terminal window:
 ```sh
-$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-poc/client/main.go lorem sentence 10 1000
+$ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/client/main.go lorem sentence 10 1000
 ```
 
 ### HTTP Usage
