@@ -21,12 +21,12 @@ $ go mod download
 ```
 
 ### gRPC Usage
-Step #1:
+Step #1: Start the server...
 ```sh
 $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/main.go
 ```
 
-Step #2: Open another terminal window and run:
+Step #2: Open another terminal window and run...
 ```sh
 $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/client/main.go lorem sentence 10 1000
 ```
