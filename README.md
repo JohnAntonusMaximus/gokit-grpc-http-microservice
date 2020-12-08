@@ -2,12 +2,6 @@
 
 This is proof of concept for a gRPC microserve using GoKit that generates lorem ipsum text between a minimum and maximum number of characters. Can generate words, sentences or paragraphs with the cmd flags on the client.
 
-Format: [client Directory] 
-```sh
-go run main.go lorem (word|sentence|paragraph) (minChars) (maxChars)
-
-```
-
 ### Installation
 Step #1: Clone this repo...
 ```sh
@@ -18,6 +12,7 @@ Step #2: Install dependencies...
 ```sh
 $ cd $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice
 $ go mod download
+$ go mod vendor
 ```
 
 ### gRPC Usage
@@ -45,4 +40,10 @@ WHERE:
 Example:
 ```sh
 $ POST localhost:8080/v1/lorem/sentence/10/1000
+```
+
+For gRPC, use this format:
+```sh
+go run main.go lorem (word|sentence|paragraph) (minChars) (maxChars)
+
 ```
