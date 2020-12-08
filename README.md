@@ -9,34 +9,31 @@ go run main.go lorem (word|sentence|paragraph) (minChars) (maxChars)
 ```
 
 ### Installation
-Step One:
+Step #1: Clone this repo...
 ```sh
-Clone this repo
 $ git clone https://github.com/JohnAntonusMaximus/gokit-grpc-http-microservice.git
 ```
 
-Step Two:
+Step #2: Install dependencies...
 ```sh
+$ cd $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice
 $ go mod download
 ```
-Note: If you receive errors with finding commit hashes, just run the command again. 
 
 ### gRPC Usage
-Step One:
+Step #1:
 ```sh
 $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/main.go
 ```
 
-Step Two:
-Open another terminal window:
+Step #2: Open another terminal window and run:
 ```sh
 $ go run $GOPATH/src/github.com/johnantonusmaximus/gokit-grpc-http-microservice/client/main.go lorem sentence 10 1000
 ```
 
 ### HTTP Usage
-Step One:
+Step #1: While running the server, make a POST request to the following endpoint w/ Postman or curl:
 ```sh
-Make a POST Request to the following endpoint:
 localhost:8080/v1/lorem/{requestType}/{min}/{max}
 ```
 
