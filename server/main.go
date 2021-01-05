@@ -81,7 +81,7 @@ func main() {
 		if err != nil {
 			log.Fatalln("Error Registering Lorem Handler Form Endpoint: ", err)
 		}
-
+		fmt.Println("Server listening on PORT 8080...open another terminal window to call the service with gRPC, or use PostMan for HTTP.")
 		err = http.ListenAndServe(":8080", mux)
 		if err != nil {
 			errs <- Errors{
