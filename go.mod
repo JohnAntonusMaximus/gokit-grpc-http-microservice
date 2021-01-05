@@ -1,4 +1,4 @@
-module github.com/johnantonusmaximus/gokit-grpc-http-microservice
+module github.com/kaizenlabs/gokit-grpc-http-microservice
 
 go 1.13
 

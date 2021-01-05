@@ -12,8 +12,8 @@ import (
 	"syscall"
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	pb "github.com/johnantonusmaximus/gokit-grpc-http-microservice/proto"
-	"github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/service"
+	pb "github.com/kaizenlabs/gokit-grpc-http-microservice/proto"
+	"github.com/kaizenlabs/gokit-grpc-http-microservice/server/service"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

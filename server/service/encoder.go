@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	pb "github.com/johnantonusmaximus/gokit-grpc-http-microservice/proto"
+	pb "github.com/kaizenlabs/gokit-grpc-http-microservice/proto"
 )
 
 // EncodeGRPCLoremRequest encodes a LoremRequest

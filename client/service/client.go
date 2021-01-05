@@ -2,8 +2,8 @@ package service
 
 import (
 	grpctransport "github.com/go-kit/kit/transport/grpc"
-	pb "github.com/johnantonusmaximus/gokit-grpc-http-microservice/proto"
-	"github.com/johnantonusmaximus/gokit-grpc-http-microservice/server/service"
+	pb "github.com/kaizenlabs/gokit-grpc-http-microservice/proto"
+	"github.com/kaizenlabs/gokit-grpc-http-microservice/server/service"
 	"google.golang.org/grpc"
 )
 
